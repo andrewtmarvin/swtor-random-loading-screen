@@ -8,7 +8,11 @@ def main():
     dir_path = path.dirname(path.realpath(__file__))
 
     # Grabs a random picture from jpgs subdirectory
-    new_pic = choice(listdir(dir_path + "/jpgs"))
+    try:
+        new_pic = choice(listdir(dir_path + "/jpgs"))
+    except Exception as e:
+        print('Error occurred. Most likely there are no pictures in the /jpgs/ directory or the directory '
+              'is in the wrong place. Error: ' + e)
 
     # Deletes the old background image
     try:
