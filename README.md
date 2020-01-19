@@ -81,7 +81,9 @@ Change the icon image to the SWTOR launcher icon
 Done
 
 
+NOTES
 
+Bitraider overrides the loading screen image. Since I have it removed on my computer, everything works fine. If you don't want to remove Bitraider, I think this will still work if you call the programs in reverse order in the batch file (start SWTOR, then run script). If that doesn't work, just remove Bitraider.
 
 If you're running into errors, open the batch file and change "EXIT" to "PAUSE" to see the error messages in command prompt
 
