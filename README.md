@@ -1,6 +1,6 @@
 # swtor-random-loading-screen
 
-This is a simple script to randomly change the swtor loading screen each time the game is launched. See README for quick setup.
+This is a simple script to randomly change the swtor loading screen each time the game is launched.
 
 INSTALLATION
 
