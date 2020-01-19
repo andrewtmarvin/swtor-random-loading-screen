@@ -1,4 +1,4 @@
-from os import path, listdir, remove
+from os import path, listdir
 from shutil import copy2
 from random import choice
 
@@ -9,20 +9,14 @@ def main():
 
     # Grabs a random picture from jpgs subdirectory
     try:
-        new_pic = choice(listdir(dir_path + "/jpgs"))
+        new_pic = choice(listdir(dir_path + "\\jpgs"))
     except Exception as e:
-        print('Error occurred. Most likely there are no pictures in the /jpgs/ directory or the directory '
-              'is in the wrong place. Error: ' + e)
-
-    # Deletes the old background image
-    try:
-        remove(dir_path + "/loadingscreen.jpg")
-    except(FileNotFoundError, IOError):
-        print('Deletion failed because loading screen picture file was not found.')
+        print('Error: ' + e.__str__())
+        exit()
 
     # Copies and renames the randomly chosen pic to the correct location
     try:
-        copy2(dir_path + "/jpgs/" + new_pic, dir_path + "/loadingscreen.jpg")
+        copy2(dir_path + "\\jpgs\\" + new_pic, dir_path + "\\loadingscreen.jpg")
     except Exception as e:
         print(e)
     finally:
@@ -30,4 +24,3 @@ def main():
 
 
 main()
-
