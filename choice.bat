@@ -22,4 +22,4 @@ goto end
 
 :end
 START "launcher.exe" "C:\Program Files (x86)\Electronic Arts\BioWare\Star Wars-The Old Republic\launcher.exe"
-PAUSE
+EXIT
